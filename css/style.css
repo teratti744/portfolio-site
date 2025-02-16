@@ -474,6 +474,51 @@ section h2 {
     opacity: 1;
 }
 
+/* Project Navigation */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-light);
+}
+
+.nav-prev,
+.nav-next,
+.nav-disabled {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-prev::before {
+    content: '←';
+    font-size: 1.2em;
+}
+
+.nav-next::after {
+    content: '→';
+    font-size: 1.2em;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    background: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.nav-disabled {
+    color: var(--gray-medium);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav {
@@ -520,6 +565,18 @@ section h2 {
     .project-content h1 {
         font-size: 2rem;
         padding: 1.5rem;
+    }
+
+    .project-navigation {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .nav-prev,
+    .nav-next,
+    .nav-disabled {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
